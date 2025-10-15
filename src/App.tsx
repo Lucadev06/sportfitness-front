@@ -1,6 +1,5 @@
 import React from 'react';
 import { Header } from './components/header/Header';
-import { Button } from '@mui/material';
 import { Nosotros } from './Nosotros';
 import Sedes from './Sedes';
 import Planes from './Planes';
