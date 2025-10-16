@@ -94,7 +94,7 @@ export const HeaderMobile = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "1rem",
-            height: "30%"
+            height: "40%"
           }}
         >
         
