@@ -17,7 +17,7 @@ export const HeaderMobile = () => {
   } else if (isMedium) {
     iconMarginLeft = "40%";
   } else if (isSmall) {
-    iconMarginLeft = "3%";
+    iconMarginLeft = "1%";
   }
 
   const scrollToSection = (sectionId: string) => {
@@ -39,7 +39,7 @@ export const HeaderMobile = () => {
           display: "flex",
           alignItems: "center",
           backgroundColor: "black",
-          height: "4.5rem",
+          height: "5rem",
           padding: "0 1rem",
           marginBottom: "1.3rem",
         }}
@@ -51,7 +51,7 @@ export const HeaderMobile = () => {
           style={{
             height: "15rem",
             marginTop: "2rem",
-            marginLeft: "2.5rem",
+            marginLeft: "2rem",
           }}
         />
 
@@ -64,9 +64,7 @@ export const HeaderMobile = () => {
 
           {/* WhatsApp */}
           <IconButton
-            onClick={() =>
-              window.open("https://wa.me/5491122334455", "_blank")
-            }
+           
             sx={{
               backgroundColor: "#25D366",
               "&:hover": { backgroundColor: "#1ebe57" },
