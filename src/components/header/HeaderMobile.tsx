@@ -17,8 +17,18 @@ export const HeaderMobile = () => {
   } else if (isMedium) {
     iconMarginLeft = "40%";
   } else if (isSmall) {
-    iconMarginLeft = "20%";
+    iconMarginLeft = "3%";
   }
+
+  const scrollToSection = (sectionId: string) => {
+    setIsOpen(false);
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
 
   return (
     <>
@@ -41,7 +51,7 @@ export const HeaderMobile = () => {
           style={{
             height: "15rem",
             marginTop: "2rem",
-            marginLeft: "3rem",
+            marginLeft: "2.5rem",
           }}
         />
 
@@ -92,16 +102,16 @@ export const HeaderMobile = () => {
         
 
           {/* Opciones del menú */}
-          <Button variant="text" sx={{ fontSize: "1.1rem", color: "black", fontWeight: "bold" }}>
+          <Button variant="text" sx={{ fontSize: "1.1rem", color: "black", fontWeight: "bold" }} onClick={() => scrollToSection("nosotros")}>
             NOSOTROS
           </Button>
-          <Button variant="text" sx={{ fontSize: "1.1rem", color: "black", fontWeight: "bold" }}>
+          <Button variant="text" sx={{ fontSize: "1.1rem", color: "black", fontWeight: "bold" }} onClick={() => scrollToSection("sedes")}>
             SEDES
           </Button>
-          <Button variant="text" sx={{ fontSize: "1.1rem", color: "black", fontWeight: "bold" }}>
+          <Button variant="text" sx={{ fontSize: "1.1rem", color: "black", fontWeight: "bold" }} onClick={() => scrollToSection("planes")}>
             PLANES
           </Button>
-          <Button variant="text" sx={{ fontSize: "1.1rem", color: "black", fontWeight: "bold" }}>
+          <Button variant="text" sx={{ fontSize: "1.1rem", color: "black", fontWeight: "bold" }} onClick={() => scrollToSection("contacto")}>
             CONTACTO
           </Button>
         </Box>

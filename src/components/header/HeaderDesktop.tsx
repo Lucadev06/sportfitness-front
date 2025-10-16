@@ -30,6 +30,13 @@ export const HeaderDesktop = () => {
     marginTop = "2rem";
   }
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -66,6 +73,7 @@ export const HeaderDesktop = () => {
           variant="text"
           className="boton-menu"
           sx={{ fontSize: "1.1rem", color: "white", fontWeight: "bold" }}
+          onClick={() => scrollToSection("nosotros")}
         >
           NOSOTROS
         </Button>
@@ -73,6 +81,7 @@ export const HeaderDesktop = () => {
           variant="text"
           className="boton-menu"
           sx={{ fontSize: "1.1rem", color: "white", fontWeight: "bold" }}
+          onClick={() => scrollToSection("sedes")}
         >
           SEDES
         </Button>
@@ -80,6 +89,7 @@ export const HeaderDesktop = () => {
           variant="text"
           className="boton-menu"
           sx={{ fontSize: "1.1rem", color: "white", fontWeight: "bold" }}
+          onClick={() => scrollToSection("planes")}
         >
           PLANES
         </Button>
@@ -87,6 +97,7 @@ export const HeaderDesktop = () => {
           variant="text"
           className="boton-menu"
           sx={{ fontSize: "1.1rem", color: "white", fontWeight: "bold" }}
+          onClick={() => scrollToSection("contacto")}
         >
           CONTACTO
         </Button>
